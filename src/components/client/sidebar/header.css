@@ -1,0 +1,202 @@
+/* Phần header */
+.header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Banner */
+.header-banner {
+  width: 100%;
+  height: 60px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nút đầu tiên và thứ hai (nền vàng, hiệu ứng sóng nâu nhạt liên tục) */
+.header-top-buttons {
+  background-color: #d94700;
+}
+
+.all-header-button {
+  position: absolute;
+  left: 60px;
+  display: flex;
+  position: relative;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+/* Nút với nền vàng và hiệu ứng sóng */
+.header-button {
+  background-color: #ffeb3b !important; /* Nền vàng */
+  color: red !important;
+  border: none;
+  border-radius: 15px;
+  font-size: 12px;
+  height: auto;
+  padding: 5px 20px !important;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase; /* In hoa chữ */
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Hiệu ứng sóng liên tục */
+@keyframes waveAnimation {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.header-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(139, 69, 19, 0.5),
+    rgba(139, 69, 19, 0.2)
+  );
+  animation: waveAnimation 4s linear infinite;
+}
+
+/* Hover cho các nút đầu tiên */
+
+/* Nút text không nền, viền hiện khi hover */
+.header-button-text {
+  background-color: transparent;
+  font-size: 12px !important;
+  color: #fff !important;
+  border: 2px solid transparent;
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: 300 !important;
+  border: none !important;
+  cursor: pointer;
+  border-radius: 20px; /* Bo tròn hình viên nhộng */
+  transition: all 0.3s ease;
+}
+
+/* Khi hover vào sẽ có nền cam nhạt */
+.header-button-text:hover {
+  color: #fff !important;
+  background: #ff7e00 !important; /* Nền cam nhạt khi hover */
+  border: none !important;
+  box-shadow: none; /* Không có bóng khi hover */
+}
+
+/* Điều chỉnh cho các kích thước màn hình nhỏ hơn */
+@media (max-width: 576px) {
+  .header-button,
+  .header-button-text {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Logo & Tìm kiếm */
+.header-logo-search {
+  position: relative;
+  left: 50px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 80px;
+}
+
+/* Phần thông tin hotline, cấu hình PC và giỏ hàng */
+.header-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+}
+
+.header-info-item {
+  display: flex;
+  align-items: center;
+  color: #333 !important;
+}
+
+.header-info-item span {
+  font-size: 16px;
+  color: #333 !important;
+  margin-left: 8px;
+}
+
+.header-search input {
+  width: 300px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+/* Menu */
+.header-menu {
+  padding: 10px;
+  background-color: #ff7b00;
+}
+
+.menuClient {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menuClient .ant-menu-item {
+  font-size: 16px;
+}
+
+.menuClient .ant-menu-item:hover {
+  background-color: #ff7b00;
+}
+
+/* Avatar & Login */
+.header-user {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.btn-loginClient {
+  background-color: #ff4d4f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.btn-loginClient:hover {
+  background-color: #e04343;
+}
+
+.client-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-avtuser {
+  padding: 0 20px;
+}
